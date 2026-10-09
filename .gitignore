@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# local data — never publish (contains API key hashes and request logs)
+*.db
+*.db-wal
+*.db-shm
+
+# user-specific runtime config (ship config.example.json instead)
+config.json
+
+# third-party accelerator subproject + model weights (129 GB)
+Strata/
+Strata-data/
+
+# logs & local misc
+*.log
+debug.log
+
+# unrelated machine maintenance scripts
+check_*.ps1
+clean_temp.ps1

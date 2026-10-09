@@ -1,0 +1,21 @@
+{
+  "bind_host": "127.0.0.1",
+  "port": 8787,
+  "max_concurrency": 8,
+  "upstreams": [
+    { "name": "lm-studio", "base_url": "http://localhost:1234/v1", "api_key": null },
+    { "name": "ollama", "base_url": "http://localhost:11434/v1", "api_key": "ollama" }
+  ],
+  "model_routes": {},
+  "pricing": {
+    "electricity": {
+      "_note": "marginal electricity cost, CNY per 1M tokens (power_w * price_per_kwh / tok_per_s)",
+      "default": { "input": 0.02, "output": 0.2 }
+    },
+    "api": {
+      "_note": "equivalent commercial API price, CNY per 1M tokens (e.g. Alibaba Bailian list price)",
+      "default": { "input": 4.0, "output": 16.0 }
+    }
+  },
+  "public_url": ""
+}
